@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ titulo }}</h1>
+
+<p>Aplicación web desarrollada con Flask, MySQL y Docker.</p>
+
+<h2>Cursos disponibles</h2>
+
+{% if cursos %}
+
+<ul>
+    {% for curso in cursos %}
+    <li>{{ curso }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p>No existen cursos disponibles.</p>
+
+{% endif %}
+
+{% endblock %}
